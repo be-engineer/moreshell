@@ -142,7 +142,3 @@ wsl /mnt/d/code> ~wsl ls     # 列出 D:\code 的内容
 - **L2**：一次性进程不保留 shell 内部状态（变量、别名、函数）；命令读 stdin 会立即得到 EOF；全屏程序需用 `--l3`
 - **L3**：Linux 运行中改窗口尺寸是空操作（`script` 限制）；鼠标协议、OSC 52 剪贴板、超链接等未实现
 - **跨平台**：Linux 上只探测 bash/sh；cmd、PowerShell、WSL 仅 Windows 可用
-
-## 文档
-
-- [多 Shell 终端实施计划](multi-shell-terminal-l2-plan.md) —— 需求、取舍、路线图与功能清单
