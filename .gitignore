@@ -14,4 +14,4 @@ TestResults/
 *.log
 
 # 本地测试产物（不发布）
-publish/
+publish/*/
