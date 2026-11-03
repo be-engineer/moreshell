@@ -1,6 +1,10 @@
 # moreshell
 
-在一个窗口里用 `~` 前缀在 cmd、PowerShell、Git Bash、WSL 之间切换的自研终端。纯 C# / .NET 10 控制台程序，Windows 与 Linux 均可构建。
+在 Windows 上，cmd、PowerShell、Git Bash、WSL 各是一个独立终端——想同时用几种 shell，就得在多个窗口之间来回切换、找窗口，每个窗口的目录和历史还互不相通，很麻烦。
+
+moreshell 把这些 shell **融合进一个窗口**：用 `~` 前缀随时切换，在同一个提示符下完成几种 shell 的工作，目录、历史和补全都留在原地。
+
+纯 C# / .NET 10 控制台程序，Windows 与 Linux 均可构建。
 
 ## 主要功能
 
