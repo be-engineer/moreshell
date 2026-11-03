@@ -1,0 +1,16 @@
+# 说明：SVN 不读取本文件；实际忽略规则由 svn:ignore 属性定义。
+# 当前规则位置：
+#   .                       TestResults / console / 中文-ABC / .vscode / .idea / package
+#   src/moreshell           bin / obj
+#   tests/moreshell.Tests   bin / obj
+#
+# 新增项目目录时，在该目录上执行：
+#   svn propset svn:ignore $'bin\nobj' <目录>
+#
+# 注意：svn:ignore 只匹配所在目录的直接子项，不支持 ** 这类跨目录 glob。
+TestResults
+console
+中文-ABC
+.vscode
+.idea
+package

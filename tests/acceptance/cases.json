@@ -1,0 +1,134 @@
+[
+  {
+    "name": "cmd-echo-cn",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "echo 中文-ABC"
+  },
+  {
+    "name": "cmd-dir",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "dir /b"
+  },
+  {
+    "name": "cmd-error-exitcode",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "nosuchcommand_xyz"
+  },
+  {
+    "name": "cmd-quotes-and-escape",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "echo \"a b\" ^& echo done"
+  },
+  {
+    "name": "cmd-for-loop",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "for /L %%i in (1,1,3) do @echo line %%i"
+  },
+  {
+    "name": "cmd-streaming-long",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "for /L %%i in (1,1,300) do @echo line-%%i"
+  },
+  {
+    "name": "ps-echo-cn",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Write-Host '中文-ABC'"
+  },
+  {
+    "name": "ps-select-top3",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Get-ChildItem | Select-Object -First 3 Name"
+  },
+  {
+    "name": "ps-error-exitcode",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Get-Item C:\\no-such-path-xyz"
+  },
+  {
+    "name": "ps-quotes",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Write-Host \"ps \"\"quoted\"\" text\""
+  },
+  {
+    "name": "ps-sgr-colors",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "$e=[char]27; Write-Host \"$e[1;31mRED$e[0m $e[48;5;226mIDX226$e[0m $e[38;2;0;255;128mRGB$e[0m\""
+  },
+  {
+    "name": "bash-echo-cn",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo 中文-ABC"
+  },
+  {
+    "name": "bash-quotes",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo it's a 'test' and \"double 中文\""
+  },
+  {
+    "name": "bash-ls-color",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "ls --color=always -la /c/Windows"
+  },
+  {
+    "name": "bash-sgr-full",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "printf '\\033[1;31mRED\\033[0m \\033[38;5;196mIDX196\\033[0m \\033[38;2;0;255;128mRGB\\033[0m \\033[4;4mUL\\033[0m\\n'"
+  },
+  {
+    "name": "bash-carriage-return",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "printf '30%%\\r60%%\\r100%% done\\n'"
+  },
+  {
+    "name": "bash-exit-code",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "false"
+  },
+  {
+    "name": "wsl-echo-cn",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "echo 中文-ABC"
+  },
+  {
+    "name": "wsl-utf8-bytes",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "printf '\\xe4\\xb8\\xad\\xe6\\x96\\x87\\n'"
+  },
+  {
+    "name": "wsl-ls-color-home",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "ls --color=always -la"
+  },
+  {
+    "name": "wsl-uname",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "uname -a"
+  },
+  {
+    "name": "wsl-exit-code",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "sh -c 'exit 7'"
+  }
+]

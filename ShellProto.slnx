@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/moreshell/moreshell.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/moreshell.Tests/ShellProto.Tests.csproj" />
+  </Folder>
+</Solution>

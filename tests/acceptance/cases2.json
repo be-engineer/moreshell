@@ -1,0 +1,86 @@
+[
+  {
+    "name": "bash-quotes-valid",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo \"it's\" 'has \"dq\"' 中文"
+  },
+  {
+    "name": "bash-dollar-expansion",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo \"HOME=$HOME len=${#HOME}\""
+  },
+  {
+    "name": "bash-pipe-with-cn",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo '中文-ABC' | tr 'A-Z' 'a-z'"
+  },
+  {
+    "name": "bash-stderr-split",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "echo OUT_LINE; echo ERR_LINE >&2; exit 3"
+  },
+  {
+    "name": "bash-erase-and-cr",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "printf '10%%\\r\\033[K20%%\\r\\033[Kdone\\n'"
+  },
+  {
+    "name": "bash-clear-screen",
+    "mode": "--json",
+    "shell": "bash",
+    "command": "printf 'before\\n\\033[2Jafter\\n'"
+  },
+  {
+    "name": "cmd-single-quotes-are-literal",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "echo 'single quotes are literal in cmd'"
+  },
+  {
+    "name": "cmd-percent-var",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "echo %OS% ^& echo %PROCESSOR_ARCHITECTURE%"
+  },
+  {
+    "name": "cmd-stderr-split",
+    "mode": "--json",
+    "shell": "cmd",
+    "command": "echo OUT_LINE & nosuchcommand_xyz"
+  },
+  {
+    "name": "ps-both-streams",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Write-Output 'PS_OUT'; Write-Error 'PS_ERR'; exit 5"
+  },
+  {
+    "name": "ps-backtick-escape",
+    "mode": "--json",
+    "shell": "ps",
+    "command": "Write-Host \"line1`nline2\" -NoNewline; Write-Host '中文'"
+  },
+  {
+    "name": "wsl-quoted-path",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "echo \"HOME=$HOME\" && pwd"
+  },
+  {
+    "name": "wsl-ls-missing",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "ls /no/such/path"
+  },
+  {
+    "name": "wsl-cd-and-pwd",
+    "mode": "--json",
+    "shell": "wsl",
+    "command": "cd /usr && pwd && echo 中文"
+  }
+]

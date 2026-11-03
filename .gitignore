@@ -1,0 +1,14 @@
+# .NET 构建产物
+bin/
+obj/
+TestResults/
+
+# IDE / 编辑器
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# 本地产物
+*.log
