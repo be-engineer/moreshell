@@ -44,6 +44,73 @@ moreshell --help                查看帮助
 
 `<shell>` 可写 `~ps`、`ps`、`~bash`、`~cmd`、`~wsl` 等。
 
+### 使用示例
+
+**切换 shell、用指定 shell 执行一次**
+
+```text
+cmd D:\code> ~ps
+已切换到 Windows PowerShell
+ps D:\code> ~bash git status
+（用 Git Bash 执行，当前 shell 仍是 ps）
+ps D:\code>
+```
+
+**虚拟工作目录（每个 shell 各自记忆）**
+
+```text
+cmd D:\code> cd C:\Windows
+cmd C:\Windows> dir
+（dir 以 C:\Windows 为工作目录启动）
+cmd C:\Windows> pwd
+C:\Windows
+```
+
+**Tab 补全**
+
+```text
+ps D:\code> Get-Ch<Tab>
+Get-ChildItem
+ps D:\code> cd "C:\Prog<Tab>
+cd "C:\Program Files
+cmd C:\> ~bash ls /tm<Tab>
+ls /tmp/
+```
+
+**大输出分页（`| more` 由内置分页器接管）**
+
+```text
+~wsl cat ../notes.md | more
+（第一屏显示后停在 -- 更多：空格/Enter 下一页，q 退出 --）
+```
+
+**一次性执行与脚本断言**
+
+```bash
+# 透传退出码与颜色
+moreshell --run cmd dir
+moreshell --run ps "Get-Process | Select-Object -First 3"
+
+# 结构化输出，适合脚本断言（无颜色控制符）
+moreshell --json bash "ls /tmp" | jq '.exitCode, (.stdout | length)'
+```
+
+**L3 持久会话（全屏程序 / REPL）**
+
+```bash
+moreshell --l3 bash     # 里面可运行 vim、top、less、python REPL
+moreshell --l3 cmd      # Windows 下用 ConPTY
+```
+
+**WSL 路径映射**
+
+```text
+cmd D:\develop> ~wsl pwd
+/mnt/d/develop               # 与 wsl.exe 原生行为一致
+cmd D:\develop> ~wsl cd D:\code
+wsl /mnt/d/code> ~wsl ls     # 列出 D:\code 的内容
+```
+
 ### 内建命令
 
 | 输入 | 行为 |
