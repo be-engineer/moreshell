@@ -49,7 +49,7 @@ dotnet run --project src/moreshell/moreshell.csproj -- --l3 bash
 
 Windows 上 L3 依赖 ConPTY（Windows 10 1809+）；Linux 上依赖 util-linux 的 `script`。
 
-不编译也可以直接用仓库内的 Windows 成品：运行 `publish/moreshell.exe`（框架依赖版，目标机需已安装 .NET 10 运行时）。
+不编译也可以直接使用仓库内的 Windows 成品：运行 `publish/moreshell.exe`（框架依赖版，目标机需已安装 .NET 10 运行时）。也可以从 [Releases](https://github.com/be-engineer/moreshell/releases) 下载打包好的 zip。
 
 ## 使用方式
 
