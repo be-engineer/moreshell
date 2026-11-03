@@ -21,7 +21,21 @@ moreshell 把这些 shell **融合进一个窗口**：用 `~` 前缀随时切换
 
 ## 构建与运行
 
-要求 [.NET 10 SDK](https://dotnet.microsoft.com/download)。
+需要 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)。
+
+### 安装 .NET 10
+
+| 平台 | 方法 |
+|---|---|
+| **Windows** | 从[官方下载页](https://dotnet.microsoft.com/download/dotnet/10.0)安装 SDK；或 `winget install Microsoft.DotNet.SDK.10` |
+| **Linux** | 官方脚本：`curl -sSL https://dot.net/v1/dotnet-install.sh \| bash -s -- --channel 10.0`；Ubuntu/Debian 也可按[官方 apt 源说明](https://learn.microsoft.com/dotnet/core/install/linux-ubuntu)安装 |
+| **macOS** | 官方下载页的 pkg，或 `brew install --cask dotnet-sdk` |
+
+装好后验证：
+
+```bash
+dotnet --version    # 应输出 10.x
+```
 
 ```bash
 dotnet build ShellProto.slnx
