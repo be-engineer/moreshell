@@ -12,3 +12,6 @@ TestResults/
 
 # 本地产物
 *.log
+
+# 本地测试产物（不发布）
+publish/
